@@ -3,7 +3,7 @@ class Stack:
         self.stack = []
 
     def is_empty(self):
-        return len(self.stack) == 0
+        return self.size() == 0
 
     def peek(self):
         if self.is_empty():
@@ -18,3 +18,6 @@ class Stack:
         if self.is_empty():
             raise IndexError("pop from empty stack")
         return self.stack.pop()
+
+    def size(self):
+        return len(self.stack)
